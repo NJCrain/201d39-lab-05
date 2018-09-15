@@ -106,12 +106,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  var product = 1;
+  var product = [1];
   for(var i = 0; i < multArr.length; i++) {
-    product *= multArr[i];
+    product[0] = multiply(multArr[i], product[0])[0];
   }
-  var summary = 'The numbers ' + multArr + ' have a product of ' + product + '.';
-  return [product, summary];
+  var summary = 'The numbers ' + multArr + ' have a product of ' + product[0] + '.';
+  return [product[0], summary];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
